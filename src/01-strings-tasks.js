@@ -236,7 +236,22 @@ function getRectangleString(/* width, height */) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
+function encodeToRot13() {
+  // str
+  // const alfabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  // const antiAlfabet = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  // const alfabetArr1 = alfabet.split('');
+  // const antiAlfabetArr2 = antiAlfabet.split('');
+  // const answerArr = [];
+  // for (let i = 0; i < str.length; (i + 1)) {
+  //   if (str[i] === '!' || str[i] === '?' || str[i] === ' ') {
+  //     answerArr.push(str[i]);
+  //   } else {
+  //     const count = alfabetArr1.indexOf(str[i]);
+  //     answerArr.push(antiAlfabetArr2[count]);
+  //   }
+  // }
+  // return answerArr.join('');
   throw new Error('Not implemented');
 }
 
@@ -289,8 +304,13 @@ function isString(value) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-function getCardId(/* value */) {
-  throw new Error('Not implemented');
+function getCardId(value) {
+  const array = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
+    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
+    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
+    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
+
+  return array.indexOf(value);
 }
 
 
